@@ -2,22 +2,22 @@
   "build": {
     "beforeDevCommand": "pnpm web:dev",
     "beforeBuildCommand": "pnpm web:build",
-    "devPath": "http://localhost:1420",
-    "distDir": "../dist",
-    "withGlobalTauri": true
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420"
   },
-  "package": {
-    "productName": "osaka_clicking",
-    "version": "1.0.0"
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/app-icon.png"
+    ]
   },
-  "tauri": {
-    "allowlist": {
-      "all": false,
-      "shell": {
-        "all": false,
-        "open": true
-      }
-    },
+  "productName": "osaka_clicking",
+  "version": "1.0.0",
+  "identifier": "amysparkngng.osakaclicking",
+  "plugins": {},
+  "app": {
+    "withGlobalTauri": true,
     "windows": [
       {
         "title": "Osaka Clicking",
@@ -27,14 +27,6 @@
     ],
     "security": {
       "csp": null
-    },
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "amysparkngng.osakaclicking",
-      "icon": [
-        "icons/app-icon.png"
-      ]
     }
   }
 }
